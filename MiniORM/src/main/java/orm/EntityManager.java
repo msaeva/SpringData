@@ -433,5 +433,4 @@ public class EntityManager<E> implements DBContext<E> {
         return annotation.name(); // "users"
     }
 
-
 }

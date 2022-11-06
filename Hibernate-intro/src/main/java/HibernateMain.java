@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 import java.util.List;
 
-public class Main {
+public class HibernateMain {
     public static void main(String[] args) {
 
         Configuration configuration = new Configuration();
@@ -16,9 +16,9 @@ public class Main {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-//        Student example = new Student();
-//        example.setName("Ivan");
-//        session.persist(example);
+        Student example = new Student();
+        example.setName("Ivan");
+        session.persist(example); // insert into database
 
 
         Student student = new Student();
@@ -34,7 +34,5 @@ public class Main {
 
         session.getTransaction().commit();
         session.close();
-
-
     }
 }
