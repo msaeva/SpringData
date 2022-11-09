@@ -21,7 +21,7 @@ public class MagicLand {
     @Column(length = 100)
     private String creator;
 
-    @Column
-    private Long magic_wand_size;
+    @Column(name = "magic_wand_size")
+    private Long magicWandCreator;
 
 }
