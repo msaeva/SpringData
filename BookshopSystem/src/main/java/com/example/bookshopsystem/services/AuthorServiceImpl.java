@@ -4,6 +4,8 @@ import com.example.bookshopsystem.entities.Author;
 import com.example.bookshopsystem.repositories.AuthorRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.List;
 import java.util.Random;
 
 @Service
@@ -23,5 +25,20 @@ public class AuthorServiceImpl implements AuthorService {
         int authorId = new Random().nextInt((int) size) + 1;
 
         return this.authorRepository.findById(authorId).get();
+    }
+
+    @Override
+    public List<Author> findDistinctByBooksReleaseDateBefore(LocalDate releaseDate) {
+        return authorRepository.findDistinctByBooksReleaseDateBefore(releaseDate);
+    }
+
+    @Override
+    public List<Author> findAllByFirstNameEndingWith(String ends) {
+        return authorRepository.findAllByFirstNameEndingWith(ends);
+    }
+
+    @Override
+    public List<Author> getTotalBookCopiesByAuthor() {
+        return authorRepository.getTotalBookCopiesByAuthor();
     }
 }
