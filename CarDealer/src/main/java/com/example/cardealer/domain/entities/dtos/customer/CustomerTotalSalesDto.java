@@ -1,0 +1,19 @@
+package com.example.cardealer.domain.entities.dtos.customer;
+
+import com.google.gson.annotations.JsonAdapter;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+public class CustomerTotalSalesDto {
+    private String fullName;
+    private Long boughtCars;
+
+    @JsonAdapter(SpentMoneyAdapter.class)
+    private double spentMoney;
+}
