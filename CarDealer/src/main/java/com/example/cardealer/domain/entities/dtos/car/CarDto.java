@@ -1,7 +1,7 @@
 package com.example.cardealer.domain.entities.dtos.car;
 
 import com.example.cardealer.domain.entities.dtos.part.PartDto;
-import com.example.cardealer.domain.entities.dtos.part.PartWithNameDto;
+import com.example.cardealer.domain.entities.dtos.part.PartWithNameAndPriceDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +9,6 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -41,7 +40,7 @@ public class CarDto {
 //        return new CarWithPartsDto(car, parts);
 //    }
 
-    public static PartWithNameDto partWithNameDto(PartDto partDto) {
-        return new PartWithNameDto(partDto.getName(), partDto.getPrice());
+    public static PartWithNameAndPriceDto partWithNameDto(PartDto partDto) {
+        return new PartWithNameAndPriceDto(partDto.getName(), partDto.getPrice());
     }
 }

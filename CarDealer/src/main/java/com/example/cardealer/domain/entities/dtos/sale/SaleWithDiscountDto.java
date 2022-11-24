@@ -1,9 +1,6 @@
 package com.example.cardealer.domain.entities.dtos.sale;
 
-import com.example.cardealer.domain.entities.dtos.car.CarDto;
-import com.example.cardealer.domain.entities.dtos.car.CarWithPartsDto;
 import com.example.cardealer.domain.entities.dtos.car.CarWithoutPartsDto;
-import com.example.cardealer.domain.entities.dtos.part.PartWithNameDto;
 import com.google.gson.annotations.SerializedName;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

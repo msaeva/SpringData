@@ -1,4 +1,4 @@
-package com.example.cardealer.domain.entities.dtos.car;
+package com.example.cardealer.domain.entities.dtos.customer;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,20 +9,17 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.LinkedHashMap;
+import java.util.List;
 
-@NoArgsConstructor
+
 @Getter
 @Setter
 @AllArgsConstructor
-@XmlRootElement(name = "car")
+@NoArgsConstructor
+@XmlRootElement(name = "customers")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CarImportDto {
-    @XmlElement
-    private String make;
-
-    @XmlElement
-    private String model;
-
-    @XmlElement(name = "travelled-distance")
-    private Long travelledDistance;
+public class CustomerOderBirthdateWrapperDto {
+    @XmlElement(name = "customer")
+    private List<CustomerOrderBirthdateDto> customers;
 }

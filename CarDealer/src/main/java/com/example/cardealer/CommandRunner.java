@@ -25,18 +25,18 @@ public class CommandRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-     //  seedService.seedCars();
-      // seedService.seedCustomers();
-       // seedService.seedSales();
+        //  seedService.seedCars();
+        // seedService.seedCustomers();
+        // seedService.seedSales();
 
-      // customerService.getAllCustomersOrderByBirthday();
-      //  carService.findByMakeOrderByModelAscTravelledDistanceDesc("Toyota");
+        // customerService.getAllCustomersOrderByBirthday();
+        //  carService.findByMakeOrderByModelAscTravelledDistanceDesc("Toyota");
 
-       // supplierService.getAllLocalSuppliers();
+        // supplierService.getAllLocalSuppliers();
 
        // carService.getAllCarsWithParts();
 
-        saleService.getAllSales();
+         saleService.getAllSales();
 
     }
 }

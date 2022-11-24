@@ -3,6 +3,10 @@ package com.example.cardealer.domain.entities.constants;
 import com.google.gson.*;
 import org.modelmapper.ModelMapper;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -31,5 +35,17 @@ public enum Utils {
 
         fileWriter.flush();
         fileWriter.close();
+    }
+    public static <T> void writeXmlToFile(T data, Path filePath) throws JAXBException {
+
+        final File file = filePath.toFile();
+
+        final JAXBContext context = JAXBContext.newInstance(data.getClass());
+
+        Marshaller marshaller = context.createMarshaller();
+
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+        marshaller.marshal(data, file);
     }
 }

@@ -9,20 +9,16 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.List;
 
-@NoArgsConstructor
 @Getter
 @Setter
 @AllArgsConstructor
-@XmlRootElement(name = "car")
+@NoArgsConstructor
+@XmlRootElement(name = "cars")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CarImportDto {
-    @XmlElement
-    private String make;
+public class CarImportWrapperDto {
 
-    @XmlElement
-    private String model;
-
-    @XmlElement(name = "travelled-distance")
-    private Long travelledDistance;
+    @XmlElement(name = "car")
+    private List<CarImportDto> cars;
 }
